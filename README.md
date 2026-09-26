@@ -6,7 +6,7 @@ The project focuses on understanding how to Create, Read, Update, Delete, and Se
 
 ## Project Preview
 
-![Project Preview](./screenshots/project-preview.png)
+![Project Preview](./imgs/screenshots/project-preview.png)
 
 ## CRUD Operations
 
