@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script src="Javascript/bootstrap.bundle.min.js"></script>
+    <script src="Javascript/index.js" defer></script>
+  </head>
+  <body>
+    <header class="w-75 my-5 m-auto" role="form">
+      <div class="form-floating mb-4">
+        <input
+          onchange="validateInputs(this)"
+          type="text"
+          class="form-control"
+          id="productName"
+          placeholder="ex. iphone 17"
+        />
+        <div role="alert" class="alert alert-danger py-1 my-1 d-none">
+          Name should be 2 - 10 chars
+        </div>
+        <label for="productName">Product Name</label>
+      </div>
+      <div class="form-floating mb-4">
+        <input
+          onchange="validateInputs(this)"
+          type="number"
+          class="form-control"
+          id="productPrice"
+          placeholder="ex. 1200$"
+        />
+        <div role="alert" class="alert alert-danger py-1 my-1 d-none">
+          Price must be between 10 - 99999 EGP
+        </div>
+        <label for="productPrice">Product Price</label>
+      </div>
+      <div class="form-floating mb-4">
+        <input
+          onchange="validateInputs(this)"
+          type="text"
+          class="form-control"
+          id="productCategory"
+          list="list"
+          placeholder="Product Category"
+        />
+        <div role="alert" class="alert alert-danger py-1 my-1 d-none">
+          Choose a category from [ Laptop , Mobile , Screen ,or TV ]
+        </div>
+        <label for="productCategory">Product Category</label>
+        <datalist id="list">
+          <option value="Accessories"></option>
+          <option value="TV"></option>
+          <option value="Laptop"></option>
+          <option value="Mobile"></option>
+        </datalist>
+      </div>
+      <div class="form-floating mb-4">
+        <textarea
+          onchange="validateInputs(this)"
+          class="form-control"
+          id="productDescription"
+          placeholder="Write Product Description"
+        ></textarea>
+        <div role="alert" class="alert alert-danger py-1 my-1 d-none">
+          Description should be 3 - 100 chars
+        </div>
+        <label for="productDescription">Write Product Description ...</label>
+      </div>
+      <div class="form-floating mb-4">
+        <input type="file" class="form-control" id="productImage" />
+        <label for="productImage">Upload Image</label>
+      </div>
+      <button
+        id="addButton"
+        onclick="validateAddProduct()"
+        class="btn btn-outline-primary btn-lg"
+      >
+        Add Product
+      </button>
+      <button
+        id="updateButton"
+        onclick="validateConfirmUpdate()"
+        class="btn btn-warning btn-lg d-none"
+      >
+        Update Product
+      </button>
+      <input
+        oninput="searchProduct()"
+        id="searchInput"
+        type="search"
+        class="form-control my-3"
+        aria-label="Search a product"
+      />
+    </header>
+    <main class="container my-4">
+      <section class="row" id="displaying-area"></section>
+    </main>
+  </body>
+</html>
