@@ -4,6 +4,10 @@ A simple product management project built while learning and practicing CRUD ope
 
 The project focuses on understanding how to Create, Read, Update, Delete, and Search data through practical implementation.
 
+## Live Demo
+
+[View Live Project](https://siefbaher004.github.io/learning-vanilla-js-crud/)
+
 ## Project Preview
 
 ![Project Preview](./imgs/screenshots/project-preview.png)
